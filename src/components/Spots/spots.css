@@ -1,0 +1,107 @@
+.home__gallery-nav {
+  padding:0 30px 0 30px;
+  /* padding:0 30px;
+  /* bottom: 2em;
+  left: 22em; */
+  /* animation: fadeinDown 2s ease 0.5s both; */
+  opacity: 0;
+
+  /* position:absolute;
+width:100%;
+bottom:20em;
+bottom:0; */
+
+
+position: relative;
+
+top: -20em;
+
+}
+
+.home__gallery-nav.visible {
+ 
+  /* padding:0 30px; */
+
+  opacity:1;
+  animation: fadeinDown 1s ease both 1.3s;
+ 
+}
+
+
+
+.home__spot-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  overflow: hidden;
+  width: 100%;
+}
+.home__spot-item {
+  /*
+  calculate the width
+of each item 40px its margin-right
+6 items displayed , 5 margins for them
+*/
+  flex: 0 0 calc((100% - (40px * 5)) / 6);
+
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 300;
+  line-height: 19px;
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-right: 40px;
+  cursor: pointer;
+}
+.home__spot-item span {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 800;
+}
+
+.home__spot-item:before {
+  content: "";
+  width: 200px;
+  width: 100%;
+  border-top: 4px solid #fff;
+  position: absolute;
+  top: 0; /* Place it at the top */
+  left: 0; /* Align it with the start of the item */
+  transform: translateY(-50%); /* Optional: Adjust vertical alignment */
+  /* margin-right: 10px; */
+}
+.home__spot-item.active:before {
+  border-top-color: #4af6ce; /* Change this to your desired active color */
+}
+.home__button {
+  width: 45px;
+  /* margin-bottom:50px; */
+}
+.home__button--next {
+  margin-left: 10px;
+  transform: rotate(180deg);
+}
+
+.home__button-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes fadeinDown {
+  0% {
+    opacity: 0;
+
+    transform: translate3d(0, 5%, 0);
+  }
+  100% {
+    opacity: 1;
+
+    transform: translate3d(0, 0, 0);
+  }
+}
