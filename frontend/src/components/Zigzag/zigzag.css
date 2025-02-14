@@ -1,0 +1,24 @@
+/* .home__zigzagline{
+    position:absolute;
+ 
+    height:auto;
+    top:17em;
+
+    right:20em;
+    transform: rotate(-25deg)
+
+} */
+.home__zigzagline{
+    position:absolute;
+    /* top:0;
+    right:2em; */
+    height:auto;
+    top:14.8em;
+    top:3.8em;
+    /* right:7.9em; */
+    left:0;
+    right:0;
+    transform: rotate(140deg)
+    /* transform: rotate(-90deg);
+    transform-origin: left bottom; */
+}

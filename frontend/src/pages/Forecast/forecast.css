@@ -1,0 +1,23 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+/* height:100%; */
+/* overflow: hidden;  */
+}
+/*
+Global section
+*/
+.forecast {
+  background-color: #171918;
+  overflow: hidden;
+  /* min-height: 180vh; */
+  padding-top: 100px;
+width:100vw;
+  /* overflow: hidden; */
+  /* display: flex;
+  flex-direction: column; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}

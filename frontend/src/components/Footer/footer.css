@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #1e201f;
+  padding: 10px 0 30px 0;
+}
+.footer__img {
+  transform: rotate(90deg);
+  width: 40px;
+}
+.footer__content {
+  font-size: 10px;
+  margin-top: -10px;
+}
+@media (min-width: 769px) {
+}
+@media (min-width: 1100px) {
+  .footer__img {
+    transform: rotate(90deg);
+    width: 60px;
+  }
+  .footer__content {
+    font-size: 12px;
+  }
+}

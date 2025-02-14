@@ -1,0 +1,270 @@
+/*
+World map 
+*/
+
+.forecast__map-image {
+  /* position: absolute;
+    
+  
+    max-width: 100%;
+  
+   
+    left: 50%;
+    transform: translateX(-50%);
+  
+   
+    top: 80%;
+    transform: translate(-50%, -10%); */
+
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.forecast__map-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* .test {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+} */
+
+.test {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+  Dot in the map 
+  */
+/* .forecast__location-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #4af6cd;
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(74, 246, 205, 0.8392156863);
+  box-shadow: 0px 0px 35px 0px rgba(74, 246, 205, 0.839215686);
+  position: absolute;
+
+  opacity: 0;
+
+  left: 41.33%;
+  top: 39.24%;
+  transform: translate(-50%, -50%);
+} */
+.forecast__location-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #4af6cd;
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(74, 246, 205, 0.8392156863);
+  box-shadow: 0px 0px 35px 0px rgba(74, 246, 205, 0.839215686);
+  position: absolute;
+
+  opacity: 0;
+
+  left: 37.33%;
+  top: 34.24%;
+  transform: translate(-50%, -50%);
+}
+
+.forecast__location-dot.visible {
+  opacity: 1;
+  animation: bounce 0.5s ease both 1s;
+}
+
+/* .forecast__location-dot::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  bottom: -28.5px;
+  left: 47%;
+  border-bottom: 20px solid rgb(74, 246, 205);
+  border-left: 12px solid rgba(0, 0, 0, 0);
+  border-right: 12px solid rgba(0, 0, 0, 0);
+  border-radius: 0px 0px 10px 10px;
+  
+} */
+
+/*
+  Spot details on the map
+  */
+
+/* .forecast__spot-description {
+  background-color: rgba(15, 16, 16, 0.7);
+  border-radius: 6px;
+  width: 285px;
+  height: 232px;
+  padding: 28px 32px 0 32px;
+
+  position: absolute;
+
+  opacity: 0;
+  right: 61em;
+  z-index: 99;
+  left: 42.33%;
+  top: 16.24%;
+  transform: translate(-50%, -50%);
+} */
+
+.forecast__spot-description {
+  background-color: rgba(15, 16, 16, 0.7);
+  border-radius: 6px;
+  width: 285px;
+  height: 232px;
+  padding: 28px 32px;
+
+  position: absolute;
+
+  opacity: 0;
+  /* right: 61em; */
+  z-index: 99;
+  /* left: 42.33%; */
+  /* top: 26.24%; */
+  /* transform: translate(-50%, -50%); */
+  margin-top: 50px;
+}
+
+.forecast__spot-description.visible {
+  opacity: 1;
+  transition: opacity 2s ease 1.2s;
+}
+
+.forecast__spot-details {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 28px;
+}
+
+.forecast__spot-details__icon-wave,
+.forecast__spot-details__icon-wind,
+.forecast__spot-details__icon-water,
+.forecast__spot-details__icon-swell {
+  width: 30px;
+  padding-top: 15px;
+}
+.forecast__spot-details__icon-water {
+  width: 23px;
+}
+
+.forecast__spot-description__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 800;
+  padding-bottom: 8px;
+  margin: 0;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-family: "Fira Sans", sans-serif;
+  position: relative;
+}
+.forecast__spot-description__title:before {
+  content: "";
+  width: 80px;
+  height: 1px;
+  background-color: #4af6cd;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.forecast__spot-description__subtitle {
+  margin: 0;
+  line-height: 19px;
+  font-size: 16px;
+  font-family: "Fira Sans", sans-serif;
+}
+.forecast__spot-details__wave-info,
+.forecast__spot-details__wind-info,
+.forecast__spot-details__water-info,
+.forecast__spot-details__swell-info {
+  display: flex;
+  flex-direction: column;
+}
+.forecast__spot-details__wave-value,
+.forecast__spot-details__wind-value,
+.forecast__spot-details__water-value,
+.forecast__spot-details__swell-value {
+  margin-top: 7px;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 800;
+  font-family: "Fira Sans", sans-serif;
+}
+.forecast__spot-details__wave-label,
+.forecast__spot-details__wind-label,
+.forecast__spot-details__water-label,
+.forecast__spot-details__swell-label {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 12px;
+  font-family: "Fira Sans", sans-serif;
+  text-transform: uppercase;
+}
+/*
+Placeholder image on the map
+*/
+
+/* .forecast__image-container {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: -15em;
+} */
+.forecast__image-container {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: -3em;
+  right: -17em;
+  z-index: 5;
+}
+/* Keyframe for the bounce effect */
+@keyframes bounce {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 750px) {
+  .forecast__spot-description {
+    right: 61em;
+    z-index: 99;
+    left: 30%;
+    top: -30%;
+    /* top: 0;
+    margin-top:0; */
+  }
+  .forecast__location-dot {
+    left: 41.33%;
+    top: 39.24%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .forecast__spot-description {
+    top: -17%;
+  }
+}
+@media (min-width: 1100px) {
+  .forecast__spot-description {
+  
+    top: 0;
+    margin-top: 0;
+  }
+
+}

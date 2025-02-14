@@ -1,0 +1,27 @@
+.home__title {
+  font-size: 200px;
+  line-height: 156px;
+  font-weight: 800;
+
+  opacity: 0.2;
+  max-width: 467px;
+  position: absolute;
+  text-transform: uppercase;
+
+  top: 0.7em;
+
+  left: 2em;
+  z-index: 4;
+
+  font-family: "Fira Sans", sans-serif;
+}
+@media (min-width: 769px) {
+  .home__title {
+    font-size: 180px;
+  }
+}
+@media (min-width: 1100px) {
+  .home__title {
+    font-size: 200px;
+  }
+}

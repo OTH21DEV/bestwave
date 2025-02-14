@@ -1,0 +1,14 @@
+.home__menu-button-line {
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: #4af6cd;
+}
+.home__menu-button {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  display: flex;
+  width: 30px;
+  flex-direction: column;
+  cursor: pointer;
+}
