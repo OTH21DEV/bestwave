@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./nav.css";
 import wave from "../../assets/wave.png";
-import van from "../../assets/van.png";
+// import van from "../../assets/van.png";
 import sleep from "../../assets/sleep.png";
 import surf from "../../assets/surf.png";
 import news from "../../assets/news.png";

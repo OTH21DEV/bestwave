@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "outDir": "dist",
+    //   "allowImportingTsExtensions": true,
+      "forceConsistentCasingInFileNames": true,
+    //  "noEmit": true
+    },
+    "include": ["./**/*.ts", "services/fetchSurfData.ts"],
+    "exclude": ["node_modules", "dist"]
+  }

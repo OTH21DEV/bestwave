@@ -35,23 +35,23 @@ const DataTable: React.FC<DataTableProps> = ({ locationForecast, toggleSection, 
   //     console.log("Updated locationForecast:", locationForecast);
   //   }
   // }, [locationForecast]);
-
+console.log(locationForecast)
   return (
     <>
       {locationForecast && (
         <>
           <div className="overlay">
             <div className="table-wrapper">
-              <span onClick={(e) => (toggleSection("", index, e), setIsForecastBtnClicked((prevState) => !prevState))}>
+              <div onClick={(e) => (toggleSection("", index, e), setIsForecastBtnClicked((prevState) => !prevState))}>
                 <img src={arrow}></img>
-              </span>
+              </div>
 
               <table className="table">
                 <thead className="table__head">
                   <tr className="table__row table__row--header">
-                    <th className="table__cell table__cell--header" rowSpan="2"></th>
+                    <th className="table__cell table__cell--header" rowSpan={2}></th>
                     {dates.map((date) => (
-                      <th key={date} className="table__cell table__cell--header" colSpan="8">
+                      <th key={date} className="table__cell table__cell--header" colSpan={8}>
                         {date}
                       </th>
                     ))}

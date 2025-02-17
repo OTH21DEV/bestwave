@@ -7,9 +7,9 @@ import Spot from "../../components/Spot/spot";
 import WorldMap from "../../components/WorldMap/WorldMap";
 import ForecastTitle from "../../components/ForecastTitle/ForecastTitle";
 import CurrentLocationTitle from "../../components/CurrentLocationTitle/CurrentLocationTitle";
-import { getLocationForecast } from "../../services/forecast-services.js";
+import { getLocationForecast } from "../../services/forecast-services.ts";
 import { Matches, ToggleSectionFunction } from "../../types/index.js";
-
+import { LocationForecast } from "../../types/index.js";
 type ForecastProps = {
   matches: Matches;
 };
@@ -34,7 +34,8 @@ const Forecast: React.FC<ForecastProps> = ({ matches }) => {
 
   const titles = ["Praia do Baleal", "Baleal Sul", "Almagreira", "Baleal Reef", "Belgas", "Ferrel", "Foz do Arelho", "Praia Azul", "Supertubos", "Santa Cruz"];
 
-  const [locationForecast, setLocationForecast] = useState([]);
+  // const [locationForecast, setLocationForecast] = useState([]);
+  const [locationForecast, setLocationForecast] = useState<LocationForecast>([]);
 
   const [showPopupIndex, setShowPopupIndex] = useState<number | null>(null);
   const [isForecastBtnClicked, setIsForecastBtnClicked] = useState(false);
@@ -54,8 +55,13 @@ const Forecast: React.FC<ForecastProps> = ({ matches }) => {
         const result = await getLocationForecast(locationId);
 
         setLocationForecast(result.data);
+      
       } catch (error) {
-        console.error("Error fetching location data:", error.message);
+        if (error instanceof Error) {
+          console.error("Error fetching location data:", error.message);
+        } else {
+          console.error("An unexpected error occurred.");
+        }
       }
     }
   }, [activeSpotIndex, locationId]);

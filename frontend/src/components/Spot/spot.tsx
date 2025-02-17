@@ -80,7 +80,7 @@ const Spot = React.forwardRef<HTMLDivElement, SpotProps>(
                   {/* Spot tips content  */}
                   <div className="forecast__spot-details">
                     <div className="forecast__spot-tips">
-                      <div className="forecast__spot-tips__header" onClick={activeSpotIndex === index ? (e) => toggleSection("tips", index, e) : null}>
+                      <div className="forecast__spot-tips__header" onClick={activeSpotIndex === index ? (e) => toggleSection("tips", index, e) : undefined}>
                         <h4 className="forecast__spot-tips__title">Tips</h4>
                       </div>
 
@@ -111,7 +111,7 @@ const Spot = React.forwardRef<HTMLDivElement, SpotProps>(
                                 toggleSection("forecast", index, e);
                                 setIsForecastBtnClicked((prevState) => !prevState);
                               }
-                            : null
+                            : undefined
                         }
                       >
                         <h4 className="forecast__spot-forecast__title">Forecast</h4>

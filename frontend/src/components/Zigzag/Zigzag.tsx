@@ -13,8 +13,8 @@ const Zigzag: React.FC<ZigzagProps> = ({ startX, startY, segmentWidths, segmentH
   const svgRef = useRef<SVGPathElement | null>(null);
 
   // State to store the calculated end points of the zigzag path
-  const [endPoints, setEndPoints] = useState<{ endX: number; endY: number }>({ endX: 0, endY: 0 });
-
+  // const [endPoints, setEndPoints] = useState<{ endX: number; endY: number }>({ endX: 0, endY: 0 });
+  const [, setEndPoints] = useState<{ endX: number; endY: number }>({ endX: 0, endY: 0 });
   useEffect(() => {
     // Use effect to animate the path and set up resizing logic
     const pathElement = svgRef.current;
@@ -108,7 +108,7 @@ const Zigzag: React.FC<ZigzagProps> = ({ startX, startY, segmentWidths, segmentH
       </svg>
 
       {/* Inline styles for the zigzag path animation */}
-      <style jsx>{`
+      <style>{`
         .zigzag-path {
           transition: stroke-dashoffset 3.8s ease-in-out;
           animation: dash-animation 5.8s linear infinite;
