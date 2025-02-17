@@ -1,0 +1,18 @@
+# Node.js dependencies
+node_modules/
+
+# Build directories
+/frontend/dist/
+/backend/dist/
+/frontend/build/
+/backend/build/
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db

@@ -1,5 +1,5 @@
 import express from "express";
-import { getForecast } from "../controllers/forecastController";
+import { getForecast } from "../controllers/forecastController.ts";
 
 const router = express.Router();
 

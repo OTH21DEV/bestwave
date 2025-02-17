@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import cron from "node-cron";
 import { Pool, MysqlError, Connection } from "mysql";
 import mysql from "mysql2";
-import pool from "./../mysql";
+import pool from "./../mysql.ts";
 dotenv.config();
 // const connection = require("./../mysql.js");
 // const connection = mysql.createConnection({

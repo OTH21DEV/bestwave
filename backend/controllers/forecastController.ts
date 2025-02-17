@@ -3,7 +3,7 @@ import { QueryError ,Connection,FieldPacket} from "mysql2";
 import { Forecast } from "../../shared/types";
 // import connection from "./../mysql.ts";
 
-import pool from "./../mysql";
+import pool from "./../mysql.ts";
 
 export const getForecast = async (req: Request, res: Response): Promise<void> => {
   try {

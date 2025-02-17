@@ -106,7 +106,7 @@
   height: 750px;
 }
 
-.overlay span img {
+.overlay div img {
   width: 30px;
   height: 30px;
   margin: 0 0 60px 0;

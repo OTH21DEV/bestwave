@@ -5,7 +5,7 @@ import path from "path";
 // //let cors = require("cors");
 
 // import forecastRoutes from "./routes/forecast"
-import router from "./routes/forecast";
+import router from "./routes/forecast.ts";
 
 dotenv.config();
 
@@ -21,18 +21,20 @@ app.use((req, res, next) => {
   next();
 });
 //  serve static files
-// Resolve the path to the frontend build directory
-const frontendPath = path.resolve(__dirname, "../frontend/dist");
+// // Resolve the path to the frontend build directory
+// const frontendPath = path.resolve(__dirname, "../frontend/dist");
 
-// Add this line to serve static files
-app.use(express.static(frontendPath));
+// // Add this line to serve static files
+// app.use(express.static(frontendPath));
+
+// // Serve index.html for SPA routes
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(frontendPath, "index.html"));
+// });
+
 
 // app.use('/api', forecastRoutes);
 app.use("/api", router);
 
-// Serve index.html for SPA routes
-app.get("*", (req, res) => {
-  res.sendFile(path.join(frontendPath, "index.html"));
-});
 
 export default app;
