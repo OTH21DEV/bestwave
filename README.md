@@ -12,13 +12,14 @@ LIVE LINK :
 
 ## Technology Stack : 
 
-## Frontend
+Frontend
 
 - Vite: For fast and optimized build processes.
 - React: Library for building user interfaces.
 - TypeScript: Provides type safety and enhanced development experience.
 
-## Backend
+Backend
+
 - Node.js: JavaScript runtime environment.
 - Express.js: Web framework for Node.js.
 - MySQL: Relational database management system for storing forecast data.
